@@ -73,7 +73,8 @@ class Comment(db.Model):
     text = db.Column(db.Text, nullable=False)
 
 
-# db.create_all()
+with app.app_context():
+    db.create_all()
 
 
 # ADMIN ONLY
